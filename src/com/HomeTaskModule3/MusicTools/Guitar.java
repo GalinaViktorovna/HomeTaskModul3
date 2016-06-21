@@ -1,4 +1,4 @@
 package com.HomeTaskModule3.MusicTools;
 
-public class MusicTools {
+public class Guitar extends MusicTool {
 }
