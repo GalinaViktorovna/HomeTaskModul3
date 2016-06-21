@@ -1,4 +1,7 @@
 package com.HomeTaskModule3.Flowers;
 
-public class RoseBush extends Rose {
+import java.util.List;
+
+public class RoseBush {
+    List<Rose> roseBush;
 }
