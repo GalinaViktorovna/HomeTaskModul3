@@ -7,16 +7,18 @@ public class Runner {
 
     public static void main(String[] args) throws Exception {
 
-        Bouquet bouquet = new Bouquet();
-        Rose rose = new Rose();
-        Chamomile chamomile = new Chamomile();
-        Tulip tulip = new Tulip();
+        Rose rosaria = new Rose("Gretta", "Red");
+        Chamomile chamomile = new Chamomile("Sarreta", "Blue");
+        Tulip tulip = new Tulip("Trew", "Green");
 
-        List<Flower>flowers = new ArrayList<>();
-       // flowers.add(rose);
-      //  flowers.add(chamomile);
-        flowers.add(tulip);
-        bouquet.setBouquet(flowers);
+        List<Flower> flowersForBouquet = new ArrayList<>();
+        flowersForBouquet.add(rosaria);
+        flowersForBouquet.add(chamomile);
+        flowersForBouquet.add(tulip);
+
+        Bouquet bouquetOfFlower = new Bouquet(flowersForBouquet);
+        bouquetOfFlower.deleteFlowerFromBouquet(bouquetOfFlower.getBouquet(), rosaria);
+
 
     }
 }
