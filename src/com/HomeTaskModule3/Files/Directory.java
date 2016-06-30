@@ -4,13 +4,14 @@ import java.util.List;
 
 public class Directory {
 
-    static List<File> directory;
+    private List<File> directory;
 
-
-    public static void main(String[] args) {
-
-
+    public List<File> getDirectory() {
+        return directory;
     }
 
+    public void setDirectory(List<File> directory) {
+        this.directory = directory;
+    }
 }
 
