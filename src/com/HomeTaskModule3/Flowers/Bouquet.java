@@ -4,11 +4,20 @@ import java.util.List;
 
 public class Bouquet {
 
-    public static List<Flower> bouquet;
+    private List<Flower> bouquet;
 
+    public List<Flower> getBouquet() {
+        return bouquet;
+    }
 
-    public static void main(String[] args) {
+    public void setBouquet(List<Flower> bouquet) throws Exception {
+        if (bouquet.size() <= 1) {
+            System.out.println("It's not a bouquet!Please add more flowers!");
+            throw new Exception();
 
+        } else {
+            this.bouquet = bouquet;
+        }
     }
 }
 
