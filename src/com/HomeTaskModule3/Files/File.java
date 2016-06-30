@@ -1,17 +1,25 @@
 package com.HomeTaskModule3.Files;
 
 public class File {
-    protected String name;
+    private String name;
 
-
-    public File file() {
-        return new File();
+    public File(String name) {
+        this.name = name;
     }
 
-    public File edit(File file) {
+    public File editFile(File file) {
         return file;
     }
 
-    public void delete(File file) {
+    public void deleteFile(File file) {
+        System.out.println("F");
+        file = null;
+    }
+
+    @Override
+    public String toString() {
+        return "File{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
