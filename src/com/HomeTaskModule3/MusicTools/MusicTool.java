@@ -1,9 +1,10 @@
 package com.HomeTaskModule3.MusicTools;
 
-public class MusicTool {
-    protected String model;
+public interface MusicTool {
+    void turnOn();
 
-    public void play() {
+    void play();
 
-    }
+    void turnOff();
+
 }
