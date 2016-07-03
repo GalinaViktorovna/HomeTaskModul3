@@ -1,8 +1,9 @@
 package com.HomeTaskModule3.MusicTools;
 
-public class Guitar extends BasicMusicTool {
-    public Guitar(String name) {
-        super(name);
+public class Guitar implements MusicTool {
+    public Guitar() {
+        super();
+
     }
 
 
@@ -20,4 +21,10 @@ public class Guitar extends BasicMusicTool {
     public void turnOff() {
 
     }
+
+    @Override
+    public String getName() {
+        return "Guitar";
+    }
 }
+

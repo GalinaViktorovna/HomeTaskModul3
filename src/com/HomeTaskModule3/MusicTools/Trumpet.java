@@ -1,10 +1,10 @@
 package com.HomeTaskModule3.MusicTools;
 
-public class Trumplet extends BasicMusicTool {
-
-    public Trumplet(String name) {
-        super(name);
+public class Trumpet implements MusicTool {
+    public Trumpet() {
     }
+
+
     @Override
     public void turnOn() {
 
@@ -18,5 +18,10 @@ public class Trumplet extends BasicMusicTool {
     @Override
     public void turnOff() {
 
+    }
+
+    @Override
+    public String getName() {
+        return "Trumpet";
     }
 }

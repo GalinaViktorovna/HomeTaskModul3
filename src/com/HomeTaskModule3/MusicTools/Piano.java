@@ -1,9 +1,9 @@
 package com.HomeTaskModule3.MusicTools;
 
-public class Piano extends BasicMusicTool {
-    public Piano(String name) {
-        super(name);
+public class Piano implements MusicTool {
+    public Piano() {
     }
+
     @Override
     public void turnOn() {
 
@@ -17,5 +17,9 @@ public class Piano extends BasicMusicTool {
     @Override
     public void turnOff() {
 
+    }
+    @Override
+    public String getName() {
+        return "Piano";
     }
 }
