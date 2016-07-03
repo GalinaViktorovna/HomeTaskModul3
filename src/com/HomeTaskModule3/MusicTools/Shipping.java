@@ -1,13 +1,28 @@
 package com.HomeTaskModule3.MusicTools;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public class Shiping {
+public class Shipping {
+    private Map<String, Integer> order;
 
-    public List<MusicTool> prepareListOfMusicToolsToRemove(MusicToolsShop musicToolsShop, Map<String, Integer> order) throws ExceptionInName,ExceptionOfQuantityInOrder {
+    public Shipping() {
+        this.order = new HashMap<>();
+    }
+
+    public Map<String, Integer> getOrder() {
+        return order;
+    }
+
+    public void setOrder(Map<String, Integer> order) {
+        this.order = order;
+    }
+
+    public Map<String, Integer> putTheInMap(String key, Integer value) {
+        order.put(key, value);
+        return order;
+    }
+
+    public List<MusicTool> prepareListOfMusicToolsToRemove(MusicToolsShop musicToolsShop, Map<String, Integer> order) throws ExceptionInName, ExceptionOfQuantityInOrder {
         List<MusicTool> result = new ArrayList<>();
 
         for (Map.Entry<String, Integer> orderEntry : order.entrySet()) {
@@ -49,10 +64,10 @@ public class Shiping {
         }
     }
 
-    public void startUp(Shiping shiping,MusicToolsShop musicToolsShop) {
+    public void startUp(Shipping shipping, MusicToolsShop musicToolsShop) {
         try {
-            List<MusicTool> musicToolsToBeRemove = shiping.prepareListOfMusicToolsToRemove(musicToolsShop, musicToolsShop.getOrder());
-            shiping.removeMusicToolsFromTheShop(musicToolsShop, musicToolsShop.getOrder());
+            List<MusicTool> musicToolsToBeRemove = shipping.prepareListOfMusicToolsToRemove(musicToolsShop, shipping.getOrder());
+            shipping.removeMusicToolsFromTheShop(musicToolsShop, shipping.getOrder());
             System.out.println("Order: " + musicToolsToBeRemove);
             System.out.println(musicToolsShop.toString());
 

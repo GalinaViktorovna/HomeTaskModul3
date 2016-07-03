@@ -5,26 +5,14 @@ import java.util.*;
 public class MusicToolsShop {
 
     private List<MusicTool> musicToolsShop;
-    private Map<String, Integer> order;
+
 
     public MusicToolsShop() {
         this.musicToolsShop = new ArrayList<>();
-        this.order = new HashMap<>();
+
 
     }
 
-    public Map<String, Integer> getOrder() {
-        return order;
-    }
-
-    public void setOrder(Map<String, Integer> order) {
-        this.order = order;
-    }
-
-    public Map<String, Integer> putTheInMap(String key, Integer value) {
-        order.put(key, value);
-        return order;
-    }
 
     public List<MusicTool> getMusicToolsShop() {
         return musicToolsShop;
@@ -66,5 +54,6 @@ public class MusicToolsShop {
     }
 
 }
+
 
 
