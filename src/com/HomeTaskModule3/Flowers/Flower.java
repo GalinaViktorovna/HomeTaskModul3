@@ -1,22 +1,21 @@
 package com.HomeTaskModule3.Flowers;
 
-public class Flower {
+abstract public class Flower {
 
-    private String name;
     private String color;
+    private String size;
 
-
-    public Flower(String name, String color) {
-        this.name = name;
+    public Flower(String color,String size) {
         this.color = color;
+        this.size = size;
     }
 
-    public String getName() {
-        return name;
+    public String getSize() {
+        return size;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public String getColor() {
@@ -27,7 +26,12 @@ public class Flower {
         this.color = color;
     }
 
-    public void deleteFlower(Flower flower){
-        flower = null;
+    public String getType(){
+         return getClass().toString();
+     }
+
+    @Override
+    public String toString() {
+        return getType()+ " " + getSize() + " " + getColor();
     }
 }

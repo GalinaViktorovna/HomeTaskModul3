@@ -1,41 +1,54 @@
 package com.HomeTaskModule3.Flowers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bouquet {
-
     private List<Flower> bouquet;
 
+   /*
+   Таких методов быть не должно!Т.к. он никогда использоваться не будет,мешает читабельности
+   (анти-паттерн Лодочный якорь (Boat anchor))!
 
-    public Bouquet(List<Flower> bouquet) throws Exception {
+   public Bouquet() {
+        this.bouquet = new ArrayList<>();
+    }*/
+
+    public Bouquet(List<Flower> bouquet) throws MinimumFlowersValidationException {
         if (bouquet.size() <= 1) {
-            System.out.println("It's not a bouquet!Please add more flowers!");
-            throw new Exception();
-
+            throw new MinimumFlowersValidationException("It's not a bouquet! You can not create bouquet!Please add more flowers!");
         } else {
-
             this.bouquet = bouquet;
         }
     }
-
 
     public List<Flower> getBouquet() {
         return bouquet;
     }
 
     public void setBouquet(List<Flower> bouquet) {
-
         this.bouquet = bouquet;
     }
 
-
-    public List<Flower> deleteFlowerFromBouquet(List<Flower> bouquetForChange, Flower flowerForDelete) throws Exception {
-        if (bouquetForChange.size() < 2) {
-            System.out.println("You can not delete flower because your bouquet can not exist without flower!!!");
-            throw new Exception();
+    public void delete(Flower flower) throws Exception {
+        if (this.bouquet.size() < 2) {
+            throw new MinimumFlowersValidationException("You can not delete flower because your bouquet can not exist without flower!!!");
         } else {
-            bouquetForChange.remove(flowerForDelete);
-            return bouquetForChange;
+            bouquet.remove(flower);
+
         }
+    }
+
+    public List<String> prepareListForTable(){
+        List<String>list = new ArrayList<>();
+        String[] split;
+        for (Flower flower:bouquet
+             ) {
+            split = flower.toString().split(" ");
+            for (int i = 0;i<split.length;i++){
+                list.add(split[i]);
+        }
+
+        }return list;
     }
 }
