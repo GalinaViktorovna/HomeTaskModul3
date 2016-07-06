@@ -16,7 +16,7 @@ abstract public class Flower {
 
     public void setSize(String size) {
         this.size = size;
-    }
+    }//Антипаттерн Лодочный якорь (Boat anchor)
 
     public String getColor() {
         return color;
@@ -24,7 +24,7 @@ abstract public class Flower {
 
     public void setColor(String color) {
         this.color = color;
-    }
+    }//Антипаттерн Лодочный якорь (Boat anchor)
 
     public String getType(){
          return getClass().toString();

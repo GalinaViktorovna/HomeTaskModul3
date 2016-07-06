@@ -7,9 +7,9 @@ public class RoseBush {
 
     public List<Rose> getRoseBush() {
         return roseBush;
-    }
+    } //Антипаттерн Лодочный якорь (Boat anchor)
 
     public void setRoseBush(List<Rose> roseBush) {
         this.roseBush = roseBush;
-    }
+    }//Антипаттерн Лодочный якорь (Boat anchor)
 }

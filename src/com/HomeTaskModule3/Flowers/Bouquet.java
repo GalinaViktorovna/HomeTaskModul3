@@ -28,7 +28,7 @@ public class Bouquet {
 
     public void setBouquet(List<Flower> bouquet) {
         this.bouquet = bouquet;
-    }
+    }//Антипаттерн Лодочный якорь (Boat anchor)
 
     public void delete(Flower flower) throws Exception {
         if (this.bouquet.size() < 2) {
@@ -37,7 +37,7 @@ public class Bouquet {
             bouquet.remove(flower);
 
         }
-    }
+    }//Антипаттерн Лодочный якорь (Boat anchor)
 
     public List<String> prepareListForTable(){
         List<String>list = new ArrayList<>();
